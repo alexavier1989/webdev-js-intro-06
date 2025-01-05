@@ -7,31 +7,30 @@ const createNumberArrayElement = document.getElementById("create-number-array");
 
 function evenOrOdd() {
     const num = 3;
-    // Write the logic to decide if the variable "num" is even or odd
-    // and set the element's value the string "Even" or "Odd" accordingly
-
+    const value = num % 2 === 0 ? "Even" : "Odd";
+    evenOrOddElement.innerText = value;
 }
 
 function sumTheNumbers() {
     let sum = 0;
-    // Write the logic to sum the numbers 1 through 10
-    // using a for loop. Check the expected output
-    // on the assignment page
-
+    for (let index = 0; index < 11; index++) {
+       sum += index;
+    }
+    sumTheNumbersElement.innerText = sum;
 }
 
 function createNumberArray() {
     const numberArray = [];
-
-    // Write the logic that loops 10 times and adds the value
-    // to numberArray each iteration. Check the expected output
-    // on the assignment page
-
+    for (let index = 0; index < 10; index++) {
+        numberArray.push(index + 1);
+    }
+    createNumberArrayElement.innerText = numberArray;
 }
 
 function render() {
-    // Call the created functions
-
+    evenOrOdd();
+    sumTheNumbers();
+    createNumberArray();
 }
 
 submissionBtn.addEventListener("click", function () {
